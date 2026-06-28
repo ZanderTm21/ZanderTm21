@@ -18,13 +18,24 @@
     html { scroll-behavior: smooth; }
     body { font-family: 'Inter', sans-serif; background: var(--bg); color: var(--white); overflow-x: hidden; line-height: 1.6; }
 
+    /* TOP BAR */
+    .top-bar {
+      background: var(--red); color: white; text-align: center;
+      padding: 10px 20px; font-size: 13px; font-weight: 600; letter-spacing: 0.3px;
+      display: flex; align-items: center; justify-content: center; gap: 16px; flex-wrap: wrap;
+    }
+    .top-bar a { color: white; text-decoration: none; font-weight: 700; border-bottom: 1px solid rgba(255,255,255,0.5); }
+    .spots-left { background: rgba(0,0,0,0.2); padding: 3px 10px; border-radius: 100px; font-size: 12px; }
+
     /* NAV */
     nav {
-      position: fixed; top: 0; left: 0; right: 0; z-index: 100;
+      position: fixed; top: 40px; left: 0; right: 0; z-index: 100;
       padding: 16px 40px; display: flex; align-items: center; justify-content: space-between;
       background: rgba(8,8,8,0.9); backdrop-filter: blur(20px);
       border-bottom: 1px solid var(--border); transition: all 0.3s;
     }
+    .nav-phone { font-size: 14px; font-weight: 700; color: var(--white); text-decoration: none; display: flex; align-items: center; gap: 6px; transition: color 0.2s; }
+    .nav-phone:hover { color: var(--red); }
     .logo-wrap { display: flex; align-items: center; gap: 12px; text-decoration: none; }
     /* ⬇ REPLACE: swap img src with your actual logo file */
     .logo-img {
@@ -48,7 +59,7 @@
     /* HERO */
     #hero {
       min-height: 100vh; display: flex; align-items: center; justify-content: center;
-      padding: 120px 20px 80px; position: relative; overflow: hidden;
+      padding: 160px 20px 80px; position: relative; overflow: hidden;
     }
     .hero-video-bg {
       position: absolute; inset: 0; z-index: 0;
@@ -336,6 +347,14 @@
 </head>
 <body>
 
+<!-- TOP BAR -->
+<div class="top-bar" id="topbar">
+  <span class="spots-left">🔴 Only 3 client spots remaining this month</span>
+  <span>Every day without automation = leads lost to competitors.</span>
+  <!-- REPLACE: add your phone number below -->
+  <a href="tel:07397826947">📞 07397 826 947</a>
+</div>
+
 <!-- ═══════════════════════════════════════════
      NAV
      REPLACE: swap .logo-img text with <img src="logo.png" alt="LyonScale">
@@ -351,6 +370,8 @@
     <li><a href="#case-study">Case Study</a></li>
     <li><a href="#how">How It Works</a></li>
     <li><a href="#faq">FAQ</a></li>
+    <!-- REPLACE: add your phone number -->
+    <li><a href="tel:07397826947" class="nav-phone">📞 07397 826 947</a></li>
     <li><a href="#cta" class="nav-cta">Get Free Audit</a></li>
   </ul>
   <div class="hamburger" id="hamburger"><span></span><span></span><span></span></div>
@@ -449,6 +470,60 @@
         <div class="pain-big-text">of customers go with the first business that responds to them.</div>
         <p class="pain-big-sub">If you're not responding instantly — automatically, even when you're busy — you're handing jobs to your competitors. LyonScale makes sure you're always first.</p>
       </div>
+    </div>
+  </div>
+</section>
+
+<!-- ═══════════════════════════════════════════ ROI + GUARANTEE ═══ -->
+<section id="guarantee" style="background: var(--bg); padding: 80px 20px;">
+  <div class="container">
+    <div style="display:grid; grid-template-columns:1fr 1fr; gap:24px; align-items:stretch;">
+
+      <!-- ROI CALCULATOR -->
+      <div class="reveal" style="background:var(--bg2); border:1px solid var(--border); border-radius:16px; padding:40px;">
+        <div class="section-label">The Maths</div>
+        <h2 style="font-size:28px;font-weight:800;letter-spacing:-1px;margin-bottom:20px;line-height:1.2;">How Fast Does It Pay For Itself?</h2>
+        <p style="font-size:15px;color:var(--text-secondary);line-height:1.7;margin-bottom:28px;">The average construction or trades job in the UK is worth £2,000–£8,000. If your automation captures just <strong style="color:var(--white);">one extra job per month</strong> that you would have otherwise lost to a missed call or slow response:</p>
+        <div style="display:flex;flex-direction:column;gap:12px;margin-bottom:28px;">
+          <div style="display:flex;justify-content:space-between;align-items:center;padding:14px 18px;background:var(--bg3);border-radius:8px;border:1px solid var(--border);">
+            <span style="font-size:14px;color:var(--text-secondary);">Average job value</span>
+            <span style="font-weight:700;font-size:16px;">£3,000</span>
+          </div>
+          <div style="display:flex;justify-content:space-between;align-items:center;padding:14px 18px;background:var(--bg3);border-radius:8px;border:1px solid var(--border);">
+            <span style="font-size:14px;color:var(--text-secondary);">LyonScale Growth plan</span>
+            <span style="font-weight:700;font-size:16px;">£597/mo</span>
+          </div>
+          <div style="display:flex;justify-content:space-between;align-items:center;padding:14px 18px;background:rgba(232,23,43,0.1);border-radius:8px;border:1px solid rgba(232,23,43,0.3);">
+            <span style="font-size:14px;font-weight:700;">ROI from 1 recovered job</span>
+            <span style="font-weight:900;font-size:20px;color:var(--red);">+£2,403</span>
+          </div>
+        </div>
+        <p style="font-size:13px;color:var(--text-muted);">That's 5× return from a single job. Most clients recover the setup fee within the first 2 weeks.</p>
+      </div>
+
+      <!-- GUARANTEE -->
+      <div class="reveal" style="background:linear-gradient(135deg,rgba(232,23,43,0.1) 0%,var(--bg2) 100%);border:1px solid rgba(232,23,43,0.25);border-radius:16px;padding:40px;display:flex;flex-direction:column;justify-content:center;">
+        <div style="font-size:56px;margin-bottom:20px;">🛡️</div>
+        <div class="section-label">Our Promise</div>
+        <h2 style="font-size:28px;font-weight:800;letter-spacing:-1px;margin-bottom:16px;line-height:1.2;">30-Day Results Guarantee</h2>
+        <p style="font-size:15px;color:var(--text-secondary);line-height:1.7;margin-bottom:24px;">If your automation system isn't capturing and responding to leads within 30 days of going live — we work for free until it does. No excuses. No small print.</p>
+        <div style="display:flex;flex-direction:column;gap:10px;margin-bottom:28px;">
+          <div style="display:flex;gap:10px;align-items:center;font-size:14px;">
+            <span style="color:var(--red);font-weight:700;">✓</span>
+            <span>Setup completed within 14 days or we discount your first month</span>
+          </div>
+          <div style="display:flex;gap:10px;align-items:center;font-size:14px;">
+            <span style="color:var(--red);font-weight:700;">✓</span>
+            <span>Live within 30 days or we work free until it is</span>
+          </div>
+          <div style="display:flex;gap:10px;align-items:center;font-size:14px;">
+            <span style="color:var(--red);font-weight:700;">✓</span>
+            <span>No long-term contracts — cancel anytime</span>
+          </div>
+        </div>
+        <a href="#cta" class="btn-primary" style="justify-content:center;">Claim Your Free Audit</a>
+      </div>
+
     </div>
   </div>
 </section>
@@ -797,13 +872,30 @@
   <div class="cta-content reveal">
     <div class="section-label">Get Started</div>
     <h2 class="section-title">Stop Losing Jobs<br/>to Slow Responses.</h2>
-    <p class="section-sub">Book a free automation audit. We'll show you exactly where your business is losing money and how we fix it — no pitch, no pressure.</p>
-    <!-- REPLACE href with your actual Calendly or booking link -->
-    <a href="https://calendly.com/YOUR_LINK" class="btn-primary" style="font-size:17px;padding:18px 40px;margin:0 auto;display:inline-flex;">
-      Get Your Free Automation Audit
-      <svg width="18" height="18" viewBox="0 0 16 16" fill="none"><path d="M3 8h10M9 4l4 4-4 4" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
-    </a>
+    <p class="section-sub">Book a free automation audit or call us directly. We'll show you exactly where your business is losing money — no pitch, no pressure.</p>
+
+    <!-- CALL OR BOOK -->
+    <div style="display:flex;gap:16px;justify-content:center;flex-wrap:wrap;margin-bottom:32px;">
+      <a href="tel:07397826947" class="btn-primary" style="font-size:17px;padding:18px 36px;">
+        📞 Call: 07397 826 947
+      </a>
+      <a href="#booking" class="btn-secondary" style="font-size:17px;padding:18px 36px;">
+        Book a Free Audit Online
+      </a>
+    </div>
+
     <div class="cta-guarantee">No commitment. No hard sell. Just clarity on what you're missing.</div>
+  </div>
+
+  <!-- BOOKING CALENDAR EMBED -->
+  <div id="booking" style="max-width:800px;margin:60px auto 0;border-radius:16px;overflow:hidden;border:1px solid var(--border);">
+    <!-- REPLACE: paste your GHL calendar embed code here -->
+    <!-- To get it: GHL → Calendars → Your Calendar → Embed Code → copy the <iframe> tag -->
+    <div style="background:var(--bg2);padding:48px;text-align:center;border:2px dashed rgba(232,23,43,0.3);border-radius:16px;">
+      <div style="font-size:40px;margin-bottom:16px;">📅</div>
+      <p style="font-weight:700;font-size:18px;margin-bottom:8px;">GHL Calendar Goes Here</p>
+      <p style="font-size:14px;color:var(--text-muted);">Go to GoHighLevel → Calendars → Select your calendar → Embed Code → paste the iframe below this comment.</p>
+    </div>
   </div>
 </section>
 
@@ -845,9 +937,17 @@
     });
   });
 
-  // Nav background on scroll
+  // Hide top bar + fix nav on scroll
   const navbar = document.getElementById('navbar');
+  const topbar = document.getElementById('topbar');
   window.addEventListener('scroll', () => {
+    if (window.scrollY > 60) {
+      topbar.style.display = 'none';
+      navbar.style.top = '0';
+    } else {
+      topbar.style.display = 'flex';
+      navbar.style.top = '40px';
+    }
     navbar.style.background = window.scrollY > 50 ? 'rgba(8,8,8,0.98)' : 'rgba(8,8,8,0.9)';
   });
 
